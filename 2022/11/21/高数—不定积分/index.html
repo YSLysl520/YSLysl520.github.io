@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>高等数学—不定积分 | 杨小川</title>
+
+  <!-- keywords -->
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="题型一：不定积分的基本概念与性质★：本题最显眼的地方就是题目长。 1️⃣：首先搞清楚概念：什么是不定积分？就是F(x)的导数是f(x)，那么F(x)就是f(x)的原函数。 2️⃣：经常使用分部积分来进行计算。 3️⃣：不定积分没有函数与函数相乘，分开的相乘的性质。只有数值与函数相乘，提出来的性质。 4️⃣：连续函数一定存在原函数，反之不对。若f(X)有原函数，那么他就是有无数个原函数，原函数之间的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高等数学—不定积分">
+<meta property="og:url" content="http://example.com/2022/11/21/%E9%AB%98%E6%95%B0%E2%80%94%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/index.html">
+<meta property="og:site_name" content="杨小川">
+<meta property="og:description" content="题型一：不定积分的基本概念与性质★：本题最显眼的地方就是题目长。 1️⃣：首先搞清楚概念：什么是不定积分？就是F(x)的导数是f(x)，那么F(x)就是f(x)的原函数。 2️⃣：经常使用分部积分来进行计算。 3️⃣：不定积分没有函数与函数相乘，分开的相乘的性质。只有数值与函数相乘，提出来的性质。 4️⃣：连续函数一定存在原函数，反之不对。若f(X)有原函数，那么他就是有无数个原函数，原函数之间的">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-11-21T02:43:11.047Z">
+<meta property="article:modified_time" content="2022-11-21T03:30:57.477Z">
+<meta property="article:author" content="Mr.yang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternative" href="/atom.xml" title="杨小川" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xkj1z.com1.z0.glb.clouddn.com/head.jpg">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+
+  
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
+
+  
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+
+
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="https://cdn.jsdelivr.net/gh/YSLysl520/tuchuang@master/img/touxiang.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/"></a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/smackgg/hexo-theme-smackdown">smackdown</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="https://cdn.jsdelivr.net/gh/YSLysl520/tuchuang@master/img/touxiang.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-高数—不定积分" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2022/11/21/%E9%AB%98%E6%95%B0%E2%80%94%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" class="article-date">
+  	<time datetime="2022-11-21T02:43:11.047Z" itemprop="datePublished">2022-11-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      高等数学—不定积分
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="题型一：不定积分的基本概念与性质"><a href="#题型一：不定积分的基本概念与性质" class="headerlink" title="题型一：不定积分的基本概念与性质"></a>题型一：不定积分的基本概念与性质</h2><p>★：本题最显眼的地方就是题目长。</p>
+<p>1️⃣：首先搞清楚概念：什么是不定积分？就是F(x)的导数是f(x)，那么F(x)就是f(x)的原函数。</p>
+<p>2️⃣：经常使用分部积分来进行计算。</p>
+<p>3️⃣：不定积分没有函数与函数相乘，分开的相乘的性质。只有数值与函数相乘，提出来的性质。</p>
+<p>4️⃣：连续函数一定存在原函数，反之不对。若f(X)有原函数，那么他就是有无数个原函数，原函数之间的差值是C（常数）。</p>
+<p>5️⃣：一个被积分函数如果是偶函数，那么他的原函数不一定是奇函数，如果他的被积分函数是一个奇函数，那么他的原函数一定是偶函数。</p>
+<h2 id="题型二：换元积分法"><a href="#题型二：换元积分法" class="headerlink" title="题型二：换元积分法"></a>题型二：换元积分法</h2><p>★：换元积分法分为第一类和第二类，但是我喜欢自己总结</p>
+<p>1️⃣：简单换元：将一个复杂一点的变量，整体换成t。</p>
+<p>2️⃣：e的换元：简单换元中的一个复杂变化，一般会遇到ln，切记不要忘了加绝对值。</p>
+<p>3️⃣：三角换元：也就是第二类换元，重要的就是将他们的导数公式记住，有些导数公式，现推是可以的，如果时间充足，谁都可以拿满分。</p>
+<p>4️⃣：复杂换元：综合性的换元，看着挺闹心的。</p>
+<h2 id="题型三：分部积分法"><a href="#题型三：分部积分法" class="headerlink" title="题型三：分部积分法"></a>题型三：分部积分法</h2><p>★：udv&#x3D;uv-vdu。</p>
+<p>这是一个看着就繁，但是做起来还可以的题。不过一般情况下，这个方法已经成为其他题目的子集了，被包含了。需要对题目进行分解之后，才可以进行分部积分换元，或者他就真的是“分部”积分。</p>
+<h2 id="题型四：两类特殊函数的不定积分——有理函数和三角有理函数"><a href="#题型四：两类特殊函数的不定积分——有理函数和三角有理函数" class="headerlink" title="题型四：两类特殊函数的不定积分——有理函数和三角有理函数"></a>题型四：两类特殊函数的不定积分——有理函数和三角有理函数</h2><p>★：</p>
+<p>有理函数：恐吓流，给你指数搞得很大，这种办法就是直接上，硬碰硬，直接凑。</p>
+<p>平方差，完全平方式，不仅仅是显眼的，一眼看出来的，更多的是，需要去进行凑，去进行配方。</p>
+<p>十字相乘，平方差，完全平方式不适用的时候，就要用这个，但是这个也即是仅仅的凑，写出A，B，C，D，求得系数。分成一个又一个的小式字。在进行规整。</p>
+<h2 id="题型五：分段函数积分"><a href="#题型五：分段函数积分" class="headerlink" title="题型五：分段函数积分"></a>题型五：分段函数积分</h2><p>1️⃣：先分段</p>
+<p>2️⃣：求分界点</p>
+<p>3️⃣：得到统一的C（常数）</p>
+<h2 id="题型六：综合不定积分"><a href="#题型六：综合不定积分" class="headerlink" title="题型六：综合不定积分"></a>题型六：综合不定积分</h2>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/10/20/%E7%9F%A9%E9%98%B5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">线性代数—矩阵</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="ds-share share" data-thread-key="高数—不定积分" data-title="高等数学—不定积分" data-url="http://example.com/2022/11/21/%E9%AB%98%E6%95%B0%E2%80%94%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/"  data-images="https://cdn.jsdelivr.net/gh/YSLysl520/tuchuang@master/img/touxiang.jpg" data-content="高等数学—不定积分">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+      	<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+      </ul>
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+ 
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2022 Mr.yang
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/smackgg/hexo-theme-smackdown" target="_blank">Smackdown</a>
+        </div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js"></script>
+
+
+  </div>
+</body>
+</html>
